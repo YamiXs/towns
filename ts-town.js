@@ -1,4 +1,4 @@
-<script>
+
 /* TibiaSweden Town Pages (ts-town.js) */
 (() => {
   const cfg = window.TS_TOWN_CONFIG || {};
@@ -400,4 +400,4 @@
 
   render().catch(()=>{});
 })();
-</script>
+
