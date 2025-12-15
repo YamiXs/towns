@@ -15,8 +15,13 @@
       kind: "Town",
       wikiTitle: "Ab'Dendriel"
     };
+    console.log("CONFIG OK", window.TS_TOWN_CONFIG);
   </script>
 
-  <script src="./ts-town.js?v=2"></script>
+  <script
+    src="./ts-town.js?v=2"
+    onload="console.log('ts-town.js LOADED')"
+    onerror="console.error('ts-town.js FAILED TO LOAD')"
+  ></script>
 </body>
 </html>
