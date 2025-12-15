@@ -1,0 +1,161 @@
+/* TibiaSweden Town Pages (ts-town.css) */
+:root{
+  --ts-bg:#4e0000;
+  --ts-panel:#2a0000;
+  --ts-panel2:#3a0000;
+  --ts-accent:#f90;
+  --ts-text:#fff;
+  --ts-muted:rgba(255,255,255,.75);
+  --ts-border:rgba(255,255,255,.14);
+}
+
+#ts-town-app, #ts-town-app *{ box-sizing:border-box; }
+#ts-town-app{
+  color:var(--ts-text);
+  text-align:left;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  line-height:1.45;
+  background:var(--ts-bg);
+  padding:16px;
+  border:1px solid var(--ts-border);
+  border-radius:14px;
+}
+.ts-header{
+  display:flex;
+  gap:12px;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.ts-title{
+  margin:0;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.ts-badges{ display:flex; gap:8px; flex-wrap:wrap; }
+.ts-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--ts-border);
+  background:linear-gradient(180deg,var(--ts-panel2),var(--ts-panel));
+  font-size:12px;
+  color:var(--ts-muted);
+}
+.ts-badge strong{ color:var(--ts-accent); font-weight:800; }
+
+.ts-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+@media (min-width:900px){
+  .ts-grid{ grid-template-columns: 1.15fr .85fr; }
+}
+
+.ts-card{
+  background:linear-gradient(180deg,var(--ts-panel2),var(--ts-panel));
+  border:1px solid var(--ts-border);
+  border-radius:14px;
+  padding:12px;
+}
+.ts-card h2{
+  margin:0 0 8px 0;
+  font-size:14px;
+  letter-spacing:.2px;
+  color:var(--ts-accent);
+}
+.ts-card p{ margin:0 0 10px 0; color:var(--ts-muted); }
+
+.ts-actions{ display:flex; gap:8px; flex-wrap:wrap; }
+.ts-btn{
+  cursor:pointer;
+  border:1px solid var(--ts-border);
+  background:transparent;
+  color:var(--ts-text);
+  padding:8px 10px;
+  border-radius:10px;
+  font-size:13px;
+}
+.ts-btn:hover{ border-color:rgba(255,255,255,.28); }
+.ts-btn.ts-active{
+  border-color:rgba(255,153,0,.55);
+  box-shadow:0 0 0 2px rgba(255,153,0,.12) inset;
+}
+
+.ts-input{
+  width:100%;
+  padding:10px 10px;
+  border-radius:10px;
+  border:1px solid var(--ts-border);
+  background:rgba(0,0,0,.18);
+  color:var(--ts-text);
+}
+.ts-input::placeholder{ color:rgba(255,255,255,.5); }
+
+.ts-small{
+  font-size:12px;
+  color:var(--ts-muted);
+}
+.ts-small a{ color:var(--ts-accent); text-decoration:none; }
+.ts-small a:hover{ text-decoration:underline; }
+
+.ts-divider{ height:1px; background:var(--ts-border); margin:10px 0; }
+
+.ts-loading{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--ts-muted);
+  font-size:13px;
+}
+.ts-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--ts-accent);
+  box-shadow:0 0 0 3px rgba(255,153,0,.18);
+  animation: tsPulse 1.1s infinite ease-in-out;
+}
+@keyframes tsPulse{
+  0%,100%{ transform:scale(.85); opacity:.75; }
+  50%{ transform:scale(1.05); opacity:1; }
+}
+
+/* Wiki embed styling */
+.ts-wiki{
+  color:var(--ts-text);
+  overflow:auto;
+  max-height:78vh;
+  padding-right:4px;
+}
+.ts-wiki a{ color:var(--ts-accent); text-decoration:none; }
+.ts-wiki a:hover{ text-decoration:underline; }
+
+.ts-wiki table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+  margin:10px 0;
+}
+.ts-wiki th, .ts-wiki td{
+  border:1px solid var(--ts-border);
+  padding:6px 8px;
+  vertical-align:top;
+}
+.ts-wiki th{
+  background:rgba(0,0,0,.22);
+  color:var(--ts-accent);
+  font-weight:800;
+}
+.ts-wiki img{ max-width:100%; height:auto; }
+
+.ts-note{
+  border:1px dashed rgba(255,153,0,.45);
+  background:rgba(255,153,0,.08);
+  padding:10px;
+  border-radius:12px;
+  color:var(--ts-muted);
+}
